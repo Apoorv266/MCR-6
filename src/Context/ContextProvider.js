@@ -1,21 +1,24 @@
-import React, { createContext, useState } from 'react'
-import { cuisineData, restaurantsData } from '../Data/Data'
+import React, { createContext, useEffect, useReducer, useState } from 'react'
+import { initialData, reducerFunc } from '../Reducer/RestaurantReducer'
 
 export const contextData = createContext()
 
 const ContextProvider = ({ children }) => {
-   const [cuisineArr, setcuisineArr] = useState(cuisineData)
-   const [restaurantArr, setrestaurantArr] = useState(restaurantsData)
+   const [initialState, dispatch] = useReducer(reducerFunc, initialData)
    const [filterCuisineId, setfilterCuisineId] = useState("")
 
    const filterFunc = () =>{
-    const filteredRestaurant = filterCuisineId ? restaurantArr.filter(item => item.cuisine_id === filterCuisineId) : restaurantArr
+    const filteredRestaurant = filterCuisineId ? initialState.restaurantsData.filter(item => item.cuisine_id === filterCuisineId) : initialState.restaurantsData
     return filteredRestaurant
    }
+
+   useEffect(() => {
+    dispatch({type : "CALC_AVG_RATING"})
+   }, [])
    
   
     return (
-        <contextData.Provider value={{cuisineArr, restaurantArr, setfilterCuisineId, filterFunc}} >{children}</contextData.Provider>
+        <contextData.Provider value={{ setfilterCuisineId, filterFunc, filterCuisineId, initialState, dispatch}} >{children}</contextData.Provider>
     )
 }
 

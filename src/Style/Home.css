@@ -1,4 +1,4 @@
-.cuisine-main button, .review-btn{
+.cuisine-btn, .review-btn{
     width: 150px;
     height: 40px;
     background-color: #F04F5F;
@@ -7,4 +7,10 @@
     margin-right: 20px;
     color: white;
     font-size: 19px;
+}
+
+
+
+.active-btn{
+    background-color:green ;
 }

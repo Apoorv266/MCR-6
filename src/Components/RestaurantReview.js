@@ -9,7 +9,6 @@ const RestaurantReview = ({item}) => {
           <img
             src={pp}
             alt=""
-            srcset=""
             width={"50px"}
             height={"50px"}
             className="menu-img img-radius"

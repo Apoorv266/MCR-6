@@ -7,15 +7,15 @@ import { contextData } from '../Context/ContextProvider'
 
 const SingleRestaurant = () => {
     const {restaurantId} = useParams()
-    const {restaurantArr} = useContext(contextData)
+    const {initialState} = useContext(contextData)
 
-    const obj = restaurantArr?.find((item) => item.id === Number(restaurantId))
+    const obj = initialState?.restaurantsData?.find((item) => item.id === Number(restaurantId))
     const dishesArr = obj.menu.map(item =>item.name)
     const {ratings} = obj
     return (
         <>
         <Link to={"/"}>
-        <img src="https://static.thenounproject.com/png/1410611-200.png" alt="" srcset="" width={"50xp"} height={"50px"} className='back-btn'/>
+        <img src="https://static.thenounproject.com/png/1410611-200.png" alt="" width={"50xp"} height={"50px"} className='back-btn'/>
         </Link>
         <div className='single-page-main'>
             <RestaurantDetail dishesArr={dishesArr} obj={obj}/>

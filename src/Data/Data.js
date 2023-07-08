@@ -1,6 +1,6 @@
 export const userData = {
-    name: "Apoorv",
-    profileImg: ""
+    revName: "Apoorv",
+    pp: "https://static.vecteezy.com/system/resources/thumbnails/004/607/806/small/man-face-emotive-icon-smiling-bearded-male-character-in-yellow-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
 }
 
 

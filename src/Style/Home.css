@@ -1,5 +1,5 @@
-.cuisine-main button{
-    width: 100px;
+.cuisine-main button, .review-btn{
+    width: 150px;
     height: 40px;
     background-color: #F04F5F;
     border-radius: 5px;

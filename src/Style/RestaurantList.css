@@ -6,7 +6,6 @@
 .menu-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.restaurant-card{
-    text-alsign: left;
+    width: 90%;
+    margin: auto;
 }

@@ -31,10 +31,10 @@ const ReviewModal = ({ setopenModal }) => {
           <select onChange={(e) => setrating(e.target.value)}>
             <option value="rating" disabled selected>Select rating</option>
             <option value="1">1 star</option>
-            <option value="2">2 star</option>
-            <option value="3">3 star</option>
-            <option value="4">4 star</option>
-            <option value="5">5 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
           </select>
           <h3>Add comment :</h3>
           <textarea name="" id="" cols="85" rows="5" placeholder="add you reviews !" value={review} onChange={(e) => setreview(e.target.value)}></textarea>

@@ -8,7 +8,7 @@ const ContextProvider = ({ children }) => {
    const [filterCuisineId, setfilterCuisineId] = useState("")
 
    const filterFunc = () =>{
-    const filteredRestaurant = filterCuisineId ? initialState.restaurantsData.filter(item => item.cuisine_id === filterCuisineId) : initialState.restaurantsData
+    const filteredRestaurant = filterCuisineId ? initialState.restaurantsData.filter(item => item.cuisine_id === filterCuisineId) : []
     return filteredRestaurant
    }
 

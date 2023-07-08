@@ -5,13 +5,13 @@ import RestaurantList from './RestaurantList'
 
 
 const Home = () => {
-    const {cuisineArr}= useContext(contextData)
+    const {cuisineArr, setfilterCuisineId}= useContext(contextData)
     return (
         <div>
             <h1>Food Ordering App</h1>
             <h2>Select Cuisine</h2>
             <div className='cuisine-main'>
-               {cuisineArr?.map(({name, id}) => <button key={id}>{name}</button>)}
+               {cuisineArr?.map(({name, id}) => <button key={id} onClick={()=>setfilterCuisineId(id)}>{name}</button>)}
             </div>
             <RestaurantList/>
         </div>

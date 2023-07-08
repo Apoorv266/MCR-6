@@ -5,10 +5,10 @@ import "../Style/RestaurantList.css"
 import { Link } from 'react-router-dom'
 
 const RestaurantList = () => {
-    const { restaurantArr } = useContext(contextData)
+    const { filterFunc } = useContext(contextData)
     return (
         <div>
-            {restaurantArr?.map((item) => {
+            {filterFunc()?.map((item) => {
                 return (
                     <Link to={`/restaurant/${item.id}`} style={{textDecoration: "none", color:"black"}}>
                     <div key={item.id}>
